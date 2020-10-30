@@ -8,7 +8,7 @@ Ce fichier contient l'ensemble des emplacements (capital, ville, village et hame
 - **latitude**: Latitude 
 - **longitude**: Longitude
 
-## Comment ont été générés ces fichiers ?
+## Comment a été généré ce fichier ?
 L'extraction des données à été réalisé avec l'outil [osmium](https://osmcode.org/osmium-tool/) sur les fichiers pbf de [geofabrik](https://download.geofabrik.de/europe/france.html).
 Une découpe préalable de la carte par département a été réalisé à partir du fichier [departements-avec-outre-mer.geojson](https://github.com/gregoiredavid/france-geojson/blob/master/departements-avec-outre-mer.geojson)
 
