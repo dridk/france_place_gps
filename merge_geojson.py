@@ -31,11 +31,15 @@ for filename in glob("departements/*.final.geojson"):
             prop = feature["properties"]
             lon, lat = feature["geometry"]["coordinates"]
             if "name" in prop:
+
+                postcode = prop.get("addr:postcode", f"")
+
                 item = {
                     "name": prop["name"],
                     "place": prop["place"],
-                    "dep_code": dep_code,
-                    "dep_name": dep_name,
+                    "postcode": postcode,
+                    "depcode": dep_code,
+                    "depname": dep_name,
                     "latitude": lat,
                     "longitude": lon,
                 }
