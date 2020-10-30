@@ -3,6 +3,15 @@ import pandas as pd
 from glob import glob
 import re
 
+
+def name_from_geojson(filename):
+    with open(filename) as file:
+
+        data = json.load(file)
+
+        return data["properties"]
+
+
 items = []
 for filename in glob("departements/*.final.geojson"):
 
@@ -10,7 +19,12 @@ for filename in glob("departements/*.final.geojson"):
 
         data = json.load(file)
 
-        dep_code = re.sub(r"departements/([\d|A|B]+)\.final\.geojson", r"\1", filename)
+        base_name = filename.replace(".final", "")
+
+        dep_info = name_from_geojson(base_name)
+
+        dep_code = dep_info["code"]
+        dep_name = dep_info["nom"]
 
         for feature in data["features"]:
 
@@ -20,7 +34,8 @@ for filename in glob("departements/*.final.geojson"):
                 item = {
                     "name": prop["name"],
                     "place": prop["place"],
-                    "dep": dep_code,
+                    "dep_code": dep_code,
+                    "dep_name": dep_name,
                     "latitude": lat,
                     "longitude": lon,
                 }
