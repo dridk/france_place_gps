@@ -1,6 +1,6 @@
 ## FRENCH_PLACE_COORD.tsv
 
-Ce fichier contient l'ensemble des emplacements (capital, ville, village et hameau) extrait depuis [OpenStreeMap](https://download.geofabrik.de/europe/france.html) associés à leurs départements. 
+Ce fichier contient l'ensemble des emplacements (capital, ville, village et hameau) extrait depuis [OpenStreeMap](https://download.geofabrik.de/europe/france.html) associés à leurs départements:
 
 - **name**: Le nom de l'emplacement 
 - **place**: Le type d'emplacement (town,city,village,hamlet)
