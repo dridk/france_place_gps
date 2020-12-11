@@ -17,7 +17,7 @@ osmium sort place.pbf -o place.order.pbf
 
 # Download geojson departement + outre mer 
 wget https://github.com/gregoiredavid/france-geojson/raw/master/departements-avec-outre-mer.geojson
-split geojson into departements 
+#split geojson into departements 
 
 python split_geojson.py
 
